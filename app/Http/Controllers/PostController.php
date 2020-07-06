@@ -50,10 +50,10 @@ class PostController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     //Route model binding
-    public function create()
+    public function create(Post $post)
     {
         $this->authorize('create',Post::class);
-        return view('admin.posts.create',);
+        return view('admin.posts.create');
     }
 
     ///Create

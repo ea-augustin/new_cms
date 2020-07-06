@@ -9,6 +9,7 @@
     @elseif(session('post-updated-message'))
      <div class="alert alert-success">{{session('post-updated-message')}}</div>
     @endif
+    
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -72,7 +73,7 @@
     {{-- For New pagination --}}
     <div class="d-flex">
     <div class="mx-auto">
-   {{$posts->links()}}  
+   {{-- {{$posts->links()}}   --}}
    </div>
    </div>
    
@@ -85,6 +86,6 @@
     <script src="{{asset('vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
 
     <!-- Page level custom scripts /old pagination-->
-    {{-- <script src="{{asset('js/tables/datatables-demo.js')}}"></script> --}}
+    <script src="{{asset('js/tables/datatables-demo.js')}}"></script>
     @endsection
 </x-admin-master>
