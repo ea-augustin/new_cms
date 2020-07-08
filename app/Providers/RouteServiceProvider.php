@@ -50,6 +50,11 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapUserRoutes();
 
+        $this->mapRolesRoutes();
+
+        $this->mapPermissionsRoutes();
+
+
         //
     }
 
@@ -96,6 +101,37 @@ class RouteServiceProvider extends ServiceProvider
             ->namespace($this->namespace)
             ->group(base_path('routes/web/users.php'));
     }
+
+     /**
+     * Define the "web" routes for the application.
+     *
+     * These routes are typically stateless.
+     *
+     * @return void
+     */
+    protected function mapRolesRoutes()
+    {
+        Route::prefix('admin')
+            ->middleware('web')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/web/roles.php'));
+    }
+
+     /**
+     * Define the "web" routes for the application.
+     *
+     * These routes are typically stateless.
+     *
+     * @return void
+     */
+    protected function mapPermissionsRoutes()
+    {
+        Route::prefix('admin')
+            ->middleware('web')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/web/permissions.php'));
+    }
+
 
  
     /**
