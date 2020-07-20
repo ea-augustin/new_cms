@@ -27,7 +27,7 @@
         </div>
 
         <div class="form-group">
-            <textarea name="body" id="body" cols="30" rows="10" class="form-control" > value="{{$post->body}}"</textarea>
+            <textarea name="body" id="body" cols="30" rows="10" class="form-control" > {{$post->body}}"</textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

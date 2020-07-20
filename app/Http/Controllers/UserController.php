@@ -30,6 +30,11 @@ class UserController extends Controller
             ]
         );
     }
+
+    public function edit(User $user){
+        
+        return view('admin.users.edit',['user'=>$user]);
+    }
  
 
      public function attach(User $user){
@@ -64,6 +69,9 @@ class UserController extends Controller
         $user->update($inputs);
         return back();
     }
+
+
+    
     public function destroy(User $user)
     {
         $user->delete();
